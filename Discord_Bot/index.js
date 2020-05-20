@@ -2,12 +2,13 @@ const Discord = require('discord.js')
 const Version = Discord.version
 const Bot = new Discord.Client();
 const Prefix = "sir";
+const token = "NzEyNzE1MjMwNDU0NjEyMDQw.XsWDcA.9T6euVSgr5DWLdeBxYEz8PEl_FA";
 
 
-const token = "NzEyNzE1MjMwNDU0NjEyMDQw.XsVnNg.uy6XW2Z_az9WXlyamBgkeZ4Hr7c";
 
 Bot.on("ready", () => {
     console.log("Bot is Onlie");
+    console.log(token);
 })
 
 Bot.on("message", msg=>{
