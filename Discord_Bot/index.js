@@ -1,8 +1,8 @@
 const Discord = require('discord.js')
 const Version = Discord.version
 const Bot = new Discord.Client();
-const Prefix = "sir";
-const token = "NzEyNzE1MjMwNDU0NjEyMDQw.XsWDcA.9T6euVSgr5DWLdeBxYEz8PEl_FA";
+const Prefix = "/";
+const token = "NzEyNzE1MjMwNDU0NjEyMDQw.XsWD3A.Y85VVihhh_l2FLkCwyk4Znyv-g4";
 
 
 
@@ -22,14 +22,13 @@ Bot.on("message", message=>{
     
     let arg = message.content.substring(Prefix.length).split(" ");
 
-    switch(arg[1]){
+    switch(arg[0]){
         case 'ping':
             message.channel.send('pong');
             break;
-        case 'info':
-            if(arg[4] === 'Version'){
-                message.channel.send(Version);
-            }    
+        case 'github':
+            message.channel.send("This is the Link to this Projects Github: https://github.com/EriN-B/SirBot");
+        break;            
     }
 })
 
